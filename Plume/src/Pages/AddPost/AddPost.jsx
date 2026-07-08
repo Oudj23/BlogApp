@@ -21,7 +21,7 @@ function AddPost() {
 
         try {
             // Étape 3 : Envoi de la requête POST avec Axios vers votre backend Express
-            const response = await axios.post('http://localhost:3000/posts', {
+            const response = await axios.post('https://blogapp-backend-u4uo.onrender.com/posts', {
                 title: title,
                 content: content
             });

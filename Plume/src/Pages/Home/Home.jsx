@@ -18,7 +18,7 @@ function Home() {
 
     const fetchPosts = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/posts');
+            const response = await axios.get('https://blogapp-backend-u4uo.onrender.com/posts');
             setPosts(response.data);
         } catch (error) {
             console.error(error);
@@ -58,7 +58,7 @@ function Home() {
     // Sauvegarder les modifications (Requête PUT)
     const handleUpdate = async (id) => {
         try {
-            const response = await axios.put(`http://localhost:3000/posts/${id}`, {
+            const response = await axios.put(`https://blogapp-backend-u4uo.onrender.com/posts/${id}`, {
                 title: editTitle,
                 content: editContent
             });
@@ -75,7 +75,7 @@ function Home() {
     const handleDelete = async (id) => {
         if (window.confirm("Voulez-vous vraiment supprimer ce post ?")) {
             try {
-                await axios.delete(`http://localhost:3000/posts/${id}`);
+                await axios.delete(`https://blogapp-backend-u4uo.onrender.com/posts/${id}`);
                 setPosts(posts.filter(post => post._id !== id));
             } catch (error) {
                 console.error(error);
