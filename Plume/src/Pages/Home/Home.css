@@ -1,0 +1,158 @@
+.Home-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.Splash-screen {
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #5865F2, #4450F8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    transition: top 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.Logo-Splash { width: 8vw; height: auto; }
+.Message-Splash { color: white; padding-top: 20px; font-size: 1.1rem; transition: opacity 0.5s ease; }
+
+.Main-content { width: 100vw; padding-top: 12vh; box-sizing: border-box; }
+
+.NavBar {
+    background: linear-gradient(to right, #8a94ff, #4e5bf2);
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    padding: 0 4vw;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.Nav-Links { display: flex; gap: 3vw; }
+.Link { color: white; text-decoration: none; font-size: 1.2rem; font-family: serif; opacity: 0.9; }
+
+.Nav-Logo {
+    height: 5vh;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: brightness(0) invert(1);
+}
+
+.Posts-section { width: 100%; max-width: 1200px; margin: 0 auto; padding: 4vh 4vw; box-sizing: border-box; }
+.Posts-list { display: flex; flex-direction: column; gap: 4vh; }
+
+/* CARTES D'ARTICLES (image_9bc785.png) */
+.Post-card {
+    background-color: #f3efff;
+    border-radius: 16px;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Post-title { color: #000000; font-size: 2.2rem; font-weight: 700; margin: 0; }
+.Post-body { color: #333333; font-size: 1.25rem; line-height: 1.6; margin: 0; text-align: justify; }
+
+.Post-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.Post-author { font-size: 1rem; color: #333333; font-weight: 500; margin-left: 10px; }
+
+/* DESIGN DES BOUTONS ACCESSIBLES */
+.edit-btn {
+    background-color: transparent;
+    color: #4450F8;
+    border: 1px solid #4450F8;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.edit-btn:hover { background-color: #4450F8; color: white; }
+
+.delete-btn {
+    background-color: transparent;
+    color: #ff4d4d;
+    border: 1px solid #ff4d4d;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.delete-btn:hover { background-color: #ff4d4d; color: white; }
+
+/* CHAMPS DE MODE ÉDITION (INLINE) */
+.Edit-mode-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.Edit-input-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.Edit-textarea-content {
+    font-size: 1.1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    line-height: 1.6;
+    background-color: white;
+    resize: vertical;
+}
+
+.save-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cancel-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.No-posts { text-align: center; color: #666; font-size: 1.2rem; margin-top: 10vh; }
